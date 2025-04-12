@@ -10,7 +10,7 @@ def prettify(elem):
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="  ")
 
-def save_svg(filename, width, height, shapes, shape_groups, use_gamma = False):
+def to_svg(width, height, shapes, shape_groups, use_gamma = False):
     root = etree.Element('svg')
     root.set('version', '1.1')
     root.set('xmlns', 'http://www.w3.org/2000/svg')
@@ -152,5 +152,10 @@ def save_svg(filename, width, height, shapes, shape_groups, use_gamma = False):
             shape_node.set('stroke-linecap', 'round')
             shape_node.set('stroke-linejoin', 'round')
 
+    return prettify(root)
+
+
+def save_svg(filename, width, height, shapes, shape_groups, use_gamma = False):
+    svg = to_svg(width, height, shapes, shape_groups, use_gamma)
     with open(filename, "w") as f:
-        f.write(prettify(root))
+        f.write(svg)
