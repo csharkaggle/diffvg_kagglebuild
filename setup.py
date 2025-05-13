@@ -89,7 +89,7 @@ if len(packages) == 0:
 if 'DIFFVG_CUDA' in os.environ:
     build_with_cuda = os.environ['DIFFVG_CUDA'] == '1'
 
-setup(name = 'diffvg',
+setup(name = 'pydvg-binary',
       version = '0.0.1',
       install_requires = ["svgpathtools"],
       description = 'Differentiable Vector Graphics',

@@ -1,4 +1,10 @@
+
 # diffvg
+*NOTICE*: This is a fork of [diffvg](https://github.com/BachiLi/diffvg)
+which adds build for Linux.
+The unofficial wheels from this fork are uploaded to `pydvg-binary` on pypi.
+
+
 Differentiable Rasterizer for Vector Graphics
 https://people.csail.mit.edu/tzumao/diffvg
 

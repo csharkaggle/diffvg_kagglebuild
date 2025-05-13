@@ -1,8 +1,9 @@
 [tool.poetry]
-name = "diffvg"
+name = "pydvg-binary"
 version = "0.1.0"
-description = ""
-authors = ["Marco Lee <marco@goodnotesapp.com>"]
+description = "custom diffvg build for linux."
+readme = { content-type = "text/markdown", file = "README.md" }
+authors = ["cshara <gauuud+cshara@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8"
